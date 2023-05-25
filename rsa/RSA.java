@@ -123,10 +123,10 @@ public class RSA {
 		String msg = "hello";
 		BigInteger[] edn = genEDN();
 		BigInteger e = edn[0], d = edn[1], n = edn[2];
-    //encrypt
+                //encrypt
 		BigInteger cipher = encrypt(e, n, new BigInteger(1, msg.getBytes()));
 		System.out.println(cipher.toString(16));
-    //decrypt
+                //decrypt
 		BigInteger message = decrypt(d, n, cipher);
 		System.out.println(new String(message.toByteArray()));
 	}
