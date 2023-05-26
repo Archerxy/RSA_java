@@ -38,9 +38,9 @@ import java.util.List;
  * 
  * e * d - k * φ(n) = 1 ;  e = random(1~φ(n)), d is calculated
  * 
- * message * e = cipher (mod n) ; 
+ * message ^ e = cipher (mod n) ; 
  * 
- * cipher * d = message (mod n) ;
+ * cipher ^ d = message (mod n) ;
  * 
  * */
 
