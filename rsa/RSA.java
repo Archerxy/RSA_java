@@ -52,8 +52,8 @@ public class RSA {
 	 * */
 	public static BigInteger[] genEDN() {
 		SecureRandom sr = new SecureRandom();
-		BigInteger p1 = BigInteger.probablePrime(BITS << 1, sr);
-		BigInteger p2 = BigInteger.probablePrime(BITS << 1, sr);
+		BigInteger p1 = BigInteger.probablePrime(BITS >> 1, sr);
+		BigInteger p2 = BigInteger.probablePrime(BITS >> 1, sr);
 		BigInteger n = p1.multiply(p2);
 		BigInteger fiN = p1.subtract(BigInteger.ONE).multiply(p2.subtract(BigInteger.ONE));
 		BigInteger e = BigInteger.probablePrime(fiN.bitCount() - 1, sr);
