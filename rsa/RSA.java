@@ -56,9 +56,9 @@ public class RSA {
 		BigInteger p2 = BigInteger.probablePrime(BITS >> 1, sr);
 		BigInteger n = p1.multiply(p2);
 		BigInteger fiN = p1.subtract(BigInteger.ONE).multiply(p2.subtract(BigInteger.ONE));
-		BigInteger e = BigInteger.probablePrime(fiN.bitCount() - 1, sr);
+		BigInteger e = BigInteger.probablePrime(fiN.bitLength() - 1, sr);
 		while(e.compareTo(fiN) >= 0) {
-			e = BigInteger.probablePrime(fiN.bitCount() - 1, sr);
+			e = BigInteger.probablePrime(fiN.bitLength() - 1, sr);
 		}
 		
 		/**
