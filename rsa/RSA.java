@@ -62,8 +62,7 @@ public class RSA {
 		}
 		
 		/**
-		 * Actually, d can be calculated with code below.
-		 *  {@code BigInteger d = e.modInverse(fiN);}
+		 * Actually, d can be calculated with {@code BigInteger d = e.modInverse(fiN);}.
 		 * Euclid's algorithm to calculate d.
 		 * */
 		List<BigInteger[]> rs = new LinkedList<>();
